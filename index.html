@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Apon Talukder | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -19,17 +19,17 @@
       --accent: #007acc;
       --card-bg: #ffffff;
     }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       background: var(--bg-dark);
       color: var(--text-light);
       font-family: 'Orbitron', sans-serif;
       transition: background 0.4s, color 0.4s;
       scroll-behavior: smooth;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
     nav {
       display: flex;
@@ -122,6 +122,9 @@
       cursor: pointer;
       font-weight: bold;
       transition: background 0.3s;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
     }
     .btn:hover {
       background: linear-gradient(to left, #1c92d2, var(--accent));
@@ -160,6 +163,54 @@
       font-size: 0.9rem;
       color: #777;
     }
+
+    /* Responsive About Section */
+    #about > div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+      max-width: 900px;
+      margin: auto;
+    }
+    #about img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 15px var(--accent);
+      flex-shrink: 0;
+    }
+    #about .card {
+      flex: 1;
+      min-width: 250px;
+      padding: 20px;
+    }
+
+    @media (max-width: 480px) {
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      nav ul li {
+        margin-bottom: 10px;
+      }
+      nav {
+        padding: 15px 20px;
+      }
+      header {
+        font-size: 2.2rem;
+        padding: 60px 20px 30px;
+      }
+      #about img {
+        width: 150px;
+        height: 150px;
+      }
+      section {
+        padding: 40px 15px;
+      }
+    }
   </style>
 </head>
 <body data-theme="dark">
@@ -176,15 +227,17 @@
   </nav>
 
   <header data-aos="fade-down">
-    <img src="/images/apon.jpg" alt="Apon Talukder" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 15px var(--accent);" />
     <h1>Apon Talukder</h1>
     <p>MERN Stack Developer | Passion for UI/UX</p>
   </header>
 
   <section id="about" data-aos="fade-up">
-    <div class="card">
-      <h2>About Me</h2>
-      <p>I am a MERN Stack Developer from Bangladesh 🇧🇩. I specialize in building responsive, interactive web applications using React, Node.js, Express, and MongoDB. I love crafting elegant interfaces and solving real-world problems with code.</p>
+    <div>
+      <img src="images/apon.jpg" alt="Apon Talukder" />
+      <div class="card">
+        <h2>About Me</h2>
+        <p>I am a MERN Stack Developer from Bangladesh 🇧🇩. I specialize in building responsive, interactive web applications using React, Node.js, Express, and MongoDB. I love crafting elegant interfaces and solving real-world problems with code.</p>
+      </div>
     </div>
   </section>
 
@@ -192,7 +245,7 @@
     <div class="card">
       <h2>My Resume</h2>
       <p>You can download my updated resume below:</p>
-      <a class="btn" href="/Apon_Talukder_MERN_Stack_Developer_Resume.pdf" download>📄 Download Resume</a>
+      <a class="btn" href="Apon_Talukder_MERN_Stack_Developer_Resume.pdf" download>📄 Download Resume</a>
     </div>
   </section>
 
