@@ -9,39 +9,49 @@
   <style>
 
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: rgba(10, 15, 28, 0.95);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    display: none;
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 15px 20px;
-  }
-
-  nav ul.show {
-    display: flex;
   }
 
   .menu-toggle {
     display: block;
-    cursor: pointer;
-    color: var(--accent);
-    font-size: 1.5rem;
-  }
-
-  nav {
-    flex-wrap: wrap;
-  }
-
-  header h1 {
     font-size: 1.8rem;
+    color: var(--accent);
+    cursor: pointer;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: rgba(10, 15, 28, 0.98);
+    padding: 10px 0;
+    margin-top: 10px;
+    border-top: 1px solid var(--accent);
+  }
+
+  nav ul.show {
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  header {
+    font-size: 1.8rem;
+    padding: 50px 15px 30px;
   }
 
   header p {
     font-size: 1rem;
+  }
+
+  section {
+    padding: 30px 15px;
   }
 
   .grid {
@@ -54,15 +64,25 @@
   }
 
   #about img {
-    margin-bottom: 15px;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
   }
 
-  form input, form textarea {
+  form input,
+  form textarea {
     font-size: 0.9rem;
   }
 
   .btn {
     font-size: 0.9rem;
+    width: fit-content;
+    margin: 10px auto 0;
+  }
+
+  footer {
+    padding: 15px;
+    font-size: 0.8rem;
   }
 }
 
